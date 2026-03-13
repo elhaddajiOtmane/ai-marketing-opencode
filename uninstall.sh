@@ -11,8 +11,8 @@ echo ""
 echo -e "${YELLOW}Uninstalling AI Marketing Suite...${NC}"
 echo ""
 
-SKILLS_DIR="$HOME/.claude/skills"
-AGENTS_DIR="$HOME/.claude/agents"
+SKILLS_DIR="$HOME/.opencode/skills"
+AGENTS_DIR="$HOME/.opencode/agents"
 
 # Remove skills
 SKILLS=("market" "market-audit" "market-copy" "market-emails" "market-social" "market-ads" "market-funnel" "market-competitors" "market-landing" "market-launch" "market-proposal" "market-report" "market-report-pdf" "market-seo" "market-brand")

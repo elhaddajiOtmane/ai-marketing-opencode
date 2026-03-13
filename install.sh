@@ -1,6 +1,6 @@
 #!/bin/bash
-# AI Marketing Suite — Claude Code Skills Installer
-# Installs marketing skills, agents, and scripts into Claude Code
+# AI Marketing Suite — OpenCode Skills Installer
+# Installs marketing skills, agents, and scripts into OpenCode
 
 set -e
 
@@ -14,7 +14,7 @@ NC='\033[0m'
 
 echo ""
 echo -e "${CYAN}╔══════════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║   AI Marketing Suite — Claude Code Skills    ║${NC}"
+echo -e "${CYAN}║   AI Marketing Suite — OpenCode Skills    ║${NC}"
 echo -e "${CYAN}║   15 Skills · 5 Agents · 4 Scripts · PDF     ║${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════════╝${NC}"
 echo ""
@@ -26,27 +26,27 @@ else
     # Running via curl | bash — need to clone
     echo -e "${YELLOW}Running remote install — cloning repository...${NC}"
     TEMP_DIR=$(mktemp -d)
-    git clone --depth 1 https://github.com/zubair-trabzada/ai-marketing-claude.git "$TEMP_DIR/ai-marketing-claude" 2>/dev/null
+    git clone --depth 1 https://github.com/zubair-trabzada/ai-marketing-opencode.git "$TEMP_DIR/ai-marketing-opencode" 2>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "${RED}Failed to clone repository.${NC}"
         exit 1
     fi
-    SCRIPT_DIR="$TEMP_DIR/ai-marketing-claude"
+    SCRIPT_DIR="$TEMP_DIR/ai-marketing-opencode"
 fi
 
 # Target directories
-SKILLS_DIR="$HOME/.claude/skills"
-AGENTS_DIR="$HOME/.claude/agents"
+SKILLS_DIR="$HOME/.opencode/skills"
+AGENTS_DIR="$HOME/.opencode/agents"
 
 echo -e "${BLUE}Source:${NC}  $SCRIPT_DIR"
 echo -e "${BLUE}Target:${NC} $SKILLS_DIR"
 echo ""
 
-# Check if Claude Code is available
-if command -v claude &>/dev/null; then
-    echo -e "${GREEN}✓ Claude Code detected${NC}"
+# Check if OpenCode is available
+if command -v opencode &>/dev/null; then
+    echo -e "${GREEN}✓ OpenCode detected${NC}"
 else
-    echo -e "${YELLOW}⚠ Claude Code not found in PATH${NC}"
+    echo -e "${YELLOW}⚠ OpenCode not found in PATH${NC}"
     if [ -t 0 ]; then
         read -p "  Continue anyway? (y/n): " -n 1 -r
         echo
@@ -218,5 +218,5 @@ echo "  /market report-pdf <url>   Marketing report (PDF)"
 echo "  /market seo <url>          SEO content audit"
 echo "  /market brand <url>        Brand voice analysis"
 echo ""
-echo -e "  ${YELLOW}Start a new Claude Code session to use the skills.${NC}"
+echo -e "  ${YELLOW}Start a new OpenCode session to use the skills.${NC}"
 echo ""

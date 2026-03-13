@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="banner.svg" alt="AI Marketing Suite for Claude Code" width="100%">
+  <img src="banner.svg" alt="AI Marketing Suite for OpenCode" width="100%">
 </p>
 
-# AI Marketing Suite for Claude Code
+# AI Marketing Suite for OpenCode
 
-A comprehensive marketing analysis and automation skill system for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Audit any website's marketing, generate copy, build email sequences, create content calendars, analyze competitors, and produce client-ready PDF reports — all from your terminal.
+A comprehensive marketing analysis and automation skill system for [OpenCode](https://docs.anthropic.com/en/docs/opencode-code). Audit any website's marketing, generate copy, build email sequences, create content calendars, analyze competitors, and produce client-ready PDF reports — all from your terminal.
 
 **Built for entrepreneurs, agency builders, and solopreneurs who want to sell marketing services powered by AI.**
 
@@ -12,7 +12,7 @@ A comprehensive marketing analysis and automation skill system for [Claude Code]
 
 ## What This Does
 
-Type a command in Claude Code and get instant, actionable marketing analysis:
+Type a command in OpenCode and get instant, actionable marketing analysis:
 
 ```
 > /market audit https://calendly.com
@@ -37,14 +37,14 @@ Full report saved to MARKETING-AUDIT.md
 ### One-Command Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zubair-trabzada/ai-marketing-claude/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/zubair-trabzada/ai-marketing-opencode/main/install.sh | bash
 ```
 
 ### Manual Install
 
 ```bash
-git clone https://github.com/zubair-trabzada/ai-marketing-claude.git
-cd ai-marketing-claude
+git clone https://github.com/zubair-trabzada/ai-marketing-opencode.git
+cd ai-marketing-opencode
 ./install.sh
 ```
 
@@ -81,7 +81,7 @@ pip install reportlab
 ## Architecture
 
 ```
-ai-marketing-claude/
+ai-marketing-opencode/
 ├── market/SKILL.md                     # Main orchestrator (routes all /market commands)
 │
 ├── skills/                             # 14 sub-skills
@@ -149,7 +149,7 @@ The full marketing audit scores websites across 6 dimensions:
 ## How It Works
 
 1. **You type a command** — e.g., `/market audit https://example.com`
-2. **Claude reads the skill files** — they tell Claude exactly how to analyze the site
+2. **opencode reads the skill files** — they tell opencode exactly how to analyze the site
 3. **5 subagents launch in parallel** — each one analyzes a different dimension
 4. **Python scripts run** — automated page analysis, competitor scanning
 5. **Results are compiled** — into a scored, prioritized, actionable report
@@ -184,8 +184,8 @@ The full marketing audit scores websites across 6 dimensions:
 
 Or manually:
 ```bash
-rm -rf ~/.claude/skills/market*
-rm -f ~/.claude/agents/market-*.md
+rm -rf ~/.opencode/skills/market*
+rm -f ~/.opencode/agents/market-*.md
 ```
 
 ---
